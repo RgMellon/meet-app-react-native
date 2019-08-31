@@ -7,6 +7,8 @@ import { StatusBar } from 'react-native';
 
 import { store, persistor } from './store';
 
+import App from './App';
+
 // import { Container } from './styles';
 
 export default function index() {
@@ -14,7 +16,7 @@ export default function index() {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
-        {/* <App /> */}
+        <App />
       </PersistGate>
     </Provider>
   );
