@@ -9,13 +9,11 @@ import { store, persistor } from './store';
 
 import App from './App';
 
-// import { Container } from './styles';
-
 export default function index() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+        <StatusBar barStyle="light-content" backgroundColor="#22202c" />
         <App />
       </PersistGate>
     </Provider>

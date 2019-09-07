@@ -1,15 +1,13 @@
-import React from 'react';
-
 import {
   createAppContainer,
-  createBottomTabNavigator,
   createSwitchNavigator,
-  createStackNavigator,
+  createBottomTabNavigator,
 } from 'react-navigation';
 
 // import Icon from 'react-native-vector-icons/MaterialIcons';
-// import Dashboard from '~/Pages/Dashboard';
-// import Profile from '~/Pages/Profile';
+import Dashboard from '~/Pages/Dashboard';
+import Profile from '~/Pages/Profile';
+import Subscriber from '~/Pages/Subscriber';
 
 import SignIn from '~/Pages/SignIn';
 import SignUp from '~/Pages/SignUp';
@@ -26,6 +24,24 @@ export default (isSigned = false) =>
           SignIn,
           SignUp,
         }),
+        App: createBottomTabNavigator(
+          {
+            Dashboard,
+            Profile,
+            Subscriber,
+          },
+          {
+            resetOnBlur: true,
+            tabBarOptions: {
+              keyboardHidesTabBar: true,
+              activeTintColor: '#fff',
+              inactiveTintColor: 'rgba(255, 255, 255, 0.6)',
+              style: {
+                backgroundColor: '#22202c',
+              },
+            },
+          }
+        ),
       },
       {
         initialRouteName: isSigned ? 'App' : 'Sign',

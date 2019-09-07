@@ -29,11 +29,11 @@ export function* signIn({ payload }) {
 export function* signUp({ payload }) {
   const { name, email, password } = payload;
   try {
-    yield call(api.post, 'user', {
+    yield call(api.post, 'users', {
       name,
       email,
       password,
-      provider: false,
+      // provider: false,
     });
   } catch (e) {
     Alert.alert('Erro no login', 'Falha ao logar');
