@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
+import { Image } from 'react-native';
 import {
   Container,
   ImageMeetup,
@@ -18,6 +18,7 @@ import {
 export default function Card({ item, handleAction, cancel }) {
   return (
     <Container canceled={item.canceled}>
+      <Image source={{ uri: 'http://localhost:2222/files/dc45fdffd879.png'}} />
       <ImageMeetup
         source={{
           uri: item.image.url,

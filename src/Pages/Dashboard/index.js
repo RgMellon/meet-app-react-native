@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+
 import { Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
